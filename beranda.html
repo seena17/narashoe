@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nara Shoe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <link rel="icon" href="image/nbg.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+
+  </style>
+</head>
+<body>
+  <header class="header-kustom">
+    <img src="image/nbg.png" alt="Logo" class="logo">
+    <h1><span style="color: red;">Toko</span> <span style="color: rgb(0, 162, 255);">Sepatu</span> <span style="color:blueviolet">Nara</span></h1>
+  </header>
+
+  <div id="receipt" class="receipt-container"></div>
+
+  <button id="music-btn" onclick="toggleMusic()">▶️ Putar Musik</button>
+
+  <audio id="bg-music" loop>
+    <source src="image/wii.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+
+  <nav>
+    <div><strong>Nara Shoe</strong></div>
+    <div>
+      <a onclick="showSection('produk')">Produk</a>
+      <a onclick="showSection('tentang')">Tentang</a>
+      <a onclick="showSection('kontak')">Kontak</a>
+      <a onclick="showSection('keranjang')">Keranjang</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1 style="color: cornflowerblue;">Sepatu Basket Ora Patek Apik</h1>
+  </div>
+
+  <section id="produk" class="section">
+    <h2>Produk Unggulan</h2>
+    <div class="products" id="product-list"></div>
+  </section>
+
+  <section id="tentang" class="section">
+    <h2>Tentang Kami</h2>
+    <p>Kami adalah penyedia sepatu basket eksklusif untuk para pecinta olahraga dan gaya hidup aktif.</p>
+  </section>
+
+  <section id="kontak" class="section">
+    <h2>Kontak</h2>
+    <p>Email: support@narashoe.com | Telepon: 081515899806</p>
+  </section>
+
+  <section id="keranjang" class="section">
+    <h2>Keranjang</h2>
+    <div id="cart" class="cart"></div>
+    <h3>Data Diri Pembeli</h3>
+    <form id="checkout-form">
+      <input id="nama" type="text" placeholder="Nama Lengkap" required />
+      <input id="alamat" type="text" placeholder="Alamat" required />
+      <input id="telepon" type="tel" placeholder="Nomor HP" required />
+      <select id="ukuran" required>
+        <option value="">Pilih Ukuran Sepatu</option>
+        <option value="40">40</option>
+        <option value="41">41</option>
+        <option value="42">42</option>
+        <option value="42">43</option
+        <option value="42">44</option>
+        <option value="42">45</option>
+        <option value="42">46</option>
+      </select>
+      <button class="btn" type="submit">Bayar</button>
+    </form>
+    <div id="receipt"></div>
+    <button id="download-btn" class="btn" onclick="downloadPDF()">Download Struk PDF</button>
+  </section>
+
+  <footer>
+    &copy; 2025 Nara Shoe. All Rights Reserved.
+  </footer>
+
+  <div class="marquee">
+    <p>Selamat datang di Nara Shoe! Nikmati koleksi sepatu basket ora patek apik dan premium kami dengan diskon menarik!</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
